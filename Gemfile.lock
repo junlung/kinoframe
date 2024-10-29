@@ -83,21 +83,43 @@ GEM
     concurrent-ruby (1.3.4)
     connection_pool (2.4.1)
     crass (1.0.6)
+    csv (3.3.0)
     date (3.3.4)
     debug (1.9.2)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    dotenv (3.1.4)
+    dotenv-rails (3.1.4)
+      dotenv (= 3.1.4)
+      railties (>= 6.1)
     drb (2.2.1)
     error_highlight (0.6.0)
     erubi (1.13.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    httparty (0.22.0)
+      csv
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
     irb (1.14.1)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
+    logger (1.6.1)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -110,6 +132,8 @@ GEM
     mini_mime (1.1.5)
     minitest (5.25.1)
     msgpack (1.7.3)
+    multi_xml (0.7.1)
+      bigdecimal (~> 3.1)
     mutex_m (0.2.0)
     net-imap (0.5.0)
       date
@@ -173,8 +197,16 @@ GEM
     rake (13.2.1)
     rdoc (6.7.0)
       psych (>= 4.0.0)
+    redis-client (0.22.2)
+      connection_pool
     reline (0.5.10)
       io-console (~> 0.5)
+    sidekiq (7.3.2)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      logger
+      rack (>= 2.2.4)
+      redis-client (>= 0.22.2)
     stringio (3.1.1)
     thor (1.3.2)
     timeout (0.4.1)
@@ -194,10 +226,14 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  dotenv-rails
   error_highlight (>= 0.4.0)
+  httparty
+  kaminari
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.4, >= 7.1.4.1)
+  sidekiq
   tzinfo-data
 
 RUBY VERSION
