@@ -1,7 +1,9 @@
-class Api::V1::MoviesController < ApplicationController
+class Api::MoviesController < ApplicationController
+  skip_before_action :authenticate_request
+  
   def index
     movies = Movie.page(params[:page]).per(params[:per_page] || 10)
-    render json: movies
+    render json: { movies: movies }
   end
 
   def show
