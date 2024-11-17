@@ -163,6 +163,9 @@ GEM
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
     pg (1.5.8)
+    pg_search (2.3.7)
+      activerecord (>= 6.1)
+      activesupport (>= 6.1)
     psych (5.1.2)
       stringio
     puma (6.4.3)
@@ -247,6 +250,7 @@ DEPENDENCIES
   jwt
   kaminari
   pg (~> 1.1)
+  pg_search
   puma (>= 5.0)
   rack-cors
   rails (~> 7.1.4, >= 7.1.4.1)
