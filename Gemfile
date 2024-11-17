@@ -42,6 +42,7 @@ gem 'kaminari'
 gem 'rack-cors'
 gem 'jwt'
 gem 'active_model_serializers'
+gem 'pg_search'
 gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
