@@ -35,6 +35,6 @@ class Api::MovieListsController < ApplicationController
   end
 
   def movie_list_item_params
-    params.require(:movie_list_item).permit(:movie_id)
+    params.permit(:movie_id)
   end
 end
