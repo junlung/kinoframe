@@ -8,5 +8,5 @@ Before you get started, you must generate a [TMDB API Key](https://developer.the
 The run `rails db:setup` to create and seed the database. The movies table will be seeded with a few movies just for testing purposes.
 
 ## Requirements
-- Ruby version: 3.1.2
+- Ruby version: 3.2.2
 - Rails version: 7.1.4.1
