@@ -25,7 +25,7 @@ class BulkMovieImporter
         end
       end
     end
-    BackgroundMovieImporterJob.perform_async(buffer) if buffer.any?
+    BackgroundMovieImporter.perform_async(buffer) if buffer.any?
   end
 
   def path
