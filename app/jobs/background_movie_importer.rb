@@ -7,6 +7,7 @@ class BackgroundMovieImporter
 
   def perform(ids)
     movies = ids.map do |id|
+      Rails.logger.info("Fetching movie: #{id}")
       movie = client.fetch_movie_by_id(id)
       sleep(SLEEP_INTERVAL)
       formtted_movie = response_to_json(movie)
