@@ -10,6 +10,7 @@ class BackgroundMovieImporter
       movie = client.fetch_movie_by_id(id)
       sleep(SLEEP_INTERVAL)
       formtted_movie = response_to_json(movie)
+      puts formtted_movie
       formtted_movie
     end
 
